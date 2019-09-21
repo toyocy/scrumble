@@ -1,0 +1,22 @@
+version: '3'
+services:
+  postgres-development:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: scrumble_development
+    volumes:
+      - ./data/:/var/lib/postgresql/data/
+    ports:
+      - 5432:5432
+  postgres-test:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: scrumble_test
+    volumes:
+      - ./data/:/var/lib/postgresql/data/
+    ports:
+      - 15432:5432 
