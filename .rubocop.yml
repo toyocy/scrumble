@@ -68,6 +68,9 @@ Metrics/MethodLength:
 Metrics/PerceivedComplexity:
   Max: 11
 
+Metrics/LineLength:
+  Max: 240
+
 # === 共通設定
 
 AllCops:
