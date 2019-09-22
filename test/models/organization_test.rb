@@ -11,7 +11,16 @@
 require 'test_helper'
 
 class OrganizationTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def setup
+    @org = organizations(:one)
+  end
+
+  test 'should be valid' do
+    assert @org.valid?
+  end
+
+  test 'organization name should be present' do
+    @org.name = '   '
+    assert_not @org.valid?
+  end
 end
