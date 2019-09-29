@@ -36,7 +36,6 @@ gem 'html2slim'
 gem 'pg'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -44,6 +43,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'annotate'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
@@ -54,7 +54,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'bullet'
   gem 'rubocop', require: false
-  gem 'annotate'
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
