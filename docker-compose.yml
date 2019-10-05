@@ -7,7 +7,7 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: scrumble_development
     volumes:
-      - ./data/:/var/lib/postgresql/data/
+      - ./data/dev:/var/lib/postgresql/data/
     ports:
       - 5432:5432
   postgres-test:
@@ -17,7 +17,7 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: scrumble_test
     volumes:
-      - ./data/:/var/lib/postgresql/data/
+      - ./data/test:/var/lib/postgresql/data/
     ports:
       - 15432:5432
     depends_on:

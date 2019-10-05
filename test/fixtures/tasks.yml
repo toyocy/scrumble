@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+usual_task:
   name: MyString
   description: MyText
   started_at: 2019-09-29 21:57:33
-  finished_at: 2019-09-29 21:57:33
+  finished_at: 2019-09-29 22:57:33
   is_allday: false
   is_done: false
 
-two:
+allday_task:
   name: MyString
   description: MyText
-  started_at: 2019-09-29 21:57:33
-  finished_at: 2019-09-29 21:57:33
-  is_allday: false
+  started_at: ""
+  finished_at: ""
+  is_allday: true
   is_done: false
