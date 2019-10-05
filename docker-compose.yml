@@ -9,7 +9,7 @@ services:
     volumes:
       - ./data/dev:/var/lib/postgresql/data/
     ports:
-      - 5432:5432
+      - 15432:5432
   postgres-test:
     image: postgres:11.5
     environment:
@@ -19,6 +19,6 @@ services:
     volumes:
       - ./data/test:/var/lib/postgresql/data/
     ports:
-      - 15432:5432
+      - 5432:5432
     depends_on:
       - postgres-development
