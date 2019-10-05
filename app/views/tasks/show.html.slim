@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @task.name
+p
+  strong Description:
+  = @task.description
+p
+  strong Started at:
+  = @task.started_at
+p
+  strong Finished at:
+  = @task.finished_at
+p
+  strong Is allday:
+  = @task.is_allday
+p
+  strong Is done:
+  = @task.is_done
+
+=> link_to 'Edit', edit_task_path(@task)
+'|
+=< link_to 'Back', tasks_path
