@@ -14,10 +14,18 @@
     = f.text_area :description
   .field
     = f.label :started_at
-    = f.datetime_select :started_at
+    .input-group[data-target-input="nearest"]
+      = f.text_field :started_at, id: "started_at", class: "form-control datepicker", data: { target: '#started_at'}
+      .input-group-append[data-target="#started_at" data-toggle="datetimepicker"]
+        .input-group-text
+          i.fa.fa-calendar
   .field
     = f.label :finished_at
-    = f.datetime_select :finished_at
+    = f.text_field :finished_at, id: "finished_at", class: "form-control datepicker", data: { target: '#finished_at'}
+    .input-group-append[data-target="#finished_at" data-toggle="datetimepicker"]
+      .input-group-text
+        i.fa.fa-calendar
+
   .field
     = f.label :is_allday
     = f.check_box :is_allday
