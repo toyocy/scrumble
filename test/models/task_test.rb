@@ -26,5 +26,6 @@ class TaskTest < ActiveSupport::TestCase
     before_time = now.prev_day(2)
     @usual_task.started_at = now
     @usual_task.finished_at = before_time
+    # TODO: テストを追加
   end
 end

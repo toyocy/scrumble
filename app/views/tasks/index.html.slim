@@ -1,14 +1,14 @@
-h1 Listing tasks
+h1 タスク一覧
 
 table
   thead
     tr
-      th Name
-      th Description
-      th Started at
-      th Finished at
-      th Is allday
-      th Is done
+      th タイトル
+      th 詳細
+      th 開始日時
+      th 終了日時
+      th 終日の予定
+      th 完了
       th
       th
       th
@@ -22,10 +22,10 @@ table
         td = task.finished_at
         td = task.is_allday
         td = task.is_done
-        td = link_to 'Show', task
-        td = link_to 'Edit', edit_task_path(task)
-        td = link_to 'Destroy', task, data: { confirm: 'Are you sure?' }, method: :delete
+        td = link_to '参照', task
+        td = link_to '編集', edit_task_path(task)
+        td = link_to '削除', task, data: { confirm: 'よろしいですか' }, method: :delete
 
 br
 
-= link_to 'New Task', new_task_path
+= link_to '新しいタスク', new_task_path
