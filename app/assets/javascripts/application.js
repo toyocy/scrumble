@@ -13,7 +13,16 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require moment
+//= require moment/ja.js
+//= require tempusdominus-bootstrap-4.js
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$(function () {
+  $('.datepicker').datetimepicker({
+    format: 'YYYY-MM-DD HH:mm:ss'
+  });
+});
